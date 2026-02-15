@@ -283,7 +283,7 @@ footer p {
     position: absolute;
     top: 80px;
     right: 0;
-    background: #0f2d5c;
+    background: #f5f8f8;
     width: 100%;
   }
 
@@ -360,6 +360,7 @@ footer p {
     gap: 25px;
   }
 }
+
 
 
 
