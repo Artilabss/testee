@@ -137,6 +137,20 @@ background: #d9e6f5;
   color: #2c3e60;
 }
 
+.lista-producao li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.lista-producao li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #d4af37; /* dourado da marca */
+    font-weight: bold;
+
 .bloco img {
   width: 100%;
   max-width: 420px;
@@ -335,6 +349,7 @@ footer p{
         gap:20px;
     }
 }
+
 
 
 
