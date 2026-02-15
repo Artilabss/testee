@@ -1,9 +1,11 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BASE */
 body {
   font-family: 'Quicksand', sans-serif;
   background-color: #f4f1ea;
@@ -11,7 +13,8 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
+
 header {
   display: flex;
   justify-content: space-between;
@@ -59,7 +62,8 @@ nav a:hover {
   cursor: pointer;
 }
 
-/* HERO / SOBRE */
+/* ================= HERO ================= */
+
 .hero {
   display: flex;
   align-items: center;
@@ -69,32 +73,31 @@ nav a:hover {
 }
 
 .hero-text {
-  max-width: 650px; /* antes estava pequeno */
+  max-width: 650px;
 }
 
 .hero-text h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 48px; /* maior no desktop */
+  font-size: 48px;
   margin-bottom: 30px;
 }
 
 .hero-text p {
-  font-size: 18px; /* texto maior */
+  font-size: 18px;
   line-height: 1.9;
   letter-spacing: 0.3px;
 }
 
 .hero-img img {
-  width: 380px; /* foto maior */
+  width: 380px;
   border-radius: 24px;
 }
 
-/* INFORMAÇÕES - ESTILO EDITORIAL */
+/* ================= INFORMAÇÕES ================= */
 
 .informacoes {
   padding: 140px 12%;
-background: #d9e6f5;
-  position: relative;
+  background: #d9e6f5;
 }
 
 .bloco {
@@ -137,20 +140,6 @@ background: #d9e6f5;
   color: #2c3e60;
 }
 
-.lista-producao li {
-    position: relative;
-    padding-left: 22px;
-    margin-bottom: 10px;
-    font-size: 17px;
-}
-
-.lista-producao li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #d4af37; /* dourado da marca */
-    font-weight: bold;
-
 .bloco img {
   width: 100%;
   max-width: 420px;
@@ -162,15 +151,44 @@ background: #d9e6f5;
 .bloco img:hover {
   transform: scale(1.03);
 }
-/* SERVIÇOS */
+
+/* BLOCO O QUE PRODUZIMOS (alinhado à esquerda) */
+
+.bloco-producao .texto {
+  text-align: left;
+}
+
+.lista-producao {
+  list-style: none;
+  padding-left: 0;
+  margin: 20px 0 25px 0;
+}
+
+.lista-producao li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+}
+
+.lista-producao li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #d4af37;
+  font-weight: bold;
+}
+
+/* ================= SERVIÇOS ================= */
+
 .servicos {
-  padding: 80px 8%;
+  padding: 100px 8%;
   text-align: center;
 }
 
 .servicos h2 {
   font-family: 'Playfair Display', serif;
   margin-bottom: 40px;
+  font-size: 36px;
 }
 
 .galeria {
@@ -182,7 +200,7 @@ background: #d9e6f5;
 
 .galeria img {
   width: 250px;
-  border-radius: 12px;
+  border-radius: 16px;
 }
 
 .links a {
@@ -190,21 +208,70 @@ background: #d9e6f5;
   text-decoration: none;
   font-weight: bold;
   color: #0f2d5c;
+  transition: 0.3s;
 }
 
 .links a:hover {
   color: #d4af37;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer {
-  padding: 20px;
-  text-align: center;
   background: #0f2d5c;
-  color: #fff;
+  color: #f4f1ea;
+  padding: 80px 8vw;
+  margin-top: 100px;
+  text-align: center;
 }
 
-/* RESPONSIVO */
+footer h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  color: #d4af37;
+}
+
+footer p {
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #f4f1ea;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.footer-links svg {
+  width: 26px;
+  height: 26px;
+  fill: #d4af37;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  transform: translateY(-4px);
+}
+
+.footer-links a:hover svg {
+  fill: white;
+}
+
+/* ================= RESPONSIVO ================= */
+
 @media (max-width: 768px) {
 
   .logo {
@@ -253,8 +320,6 @@ footer {
     max-width: 300px;
     margin-top: 30px;
   }
-}
-@media (max-width: 768px) {
 
   .informacoes {
     padding: 80px 7%;
@@ -275,8 +340,8 @@ footer {
 
   .bloco img {
     width: 100%;
-    height: 300px;              /* altura fixa elegante */
-    object-fit: cover;          /* corta proporcionalmente */
+    height: 300px;
+    object-fit: cover;
     border-radius: 26px;
   }
 
@@ -289,65 +354,11 @@ footer {
     line-height: 1.8;
     max-width: 100%;
   }
-}
-/* RODAPÉ HUMANO */
-footer{
-       background:#0f2d5c; 
-    color:white;
-    padding:60px 8vw;
-    margin-top:80px;
-}
 
-footer h2{
-    font-family:var(--titulo);
-    letter-spacing:2px;
-    margin-bottom:10px;
-}
-
-footer p{
-    opacity:0.85;
-}
-
-.footer-links{
-    display:flex;
-    gap:35px;
-    margin-top:25px;
-    flex-wrap:wrap;
-}
-
-.footer-links a{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    color:white;
-    text-decoration:none;
-    font-size:18px;
-    transition:0.3s ease;
-}
-
-/* Ícones SVG */
-.footer-links svg{
-    width:28px;
-    height:28px;
-    fill:var(--bege);
-    transition:0.3s ease;
-}
-
-/* Hover elegante */
-.footer-links a:hover{
-    transform:translateY(-4px);
-}
-
-.footer-links a:hover svg{
-    fill:white;
-}
-
-/* MOBILE */
-@media (max-width:768px){
-    .footer-links{
-        flex-direction:column;
-        gap:20px;
-    }
+  .footer-links {
+    flex-direction: column;
+    gap: 25px;
+  }
 }
 
 
