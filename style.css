@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #f4f1ea;
+  color: #1f2f4a;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: #ffffff;
+  color: #3d2c9b;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 45px;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #3d2c9b;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #d4af37;
+}
+
+.menu-mobile {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* HERO / SOBRE */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 10%;
+  background: #d9e6f5;
+  gap: 60px;
+}
+
+.hero-text {
+  max-width: 650px; /* antes estava pequeno */
+}
+
+.hero-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px; /* maior no desktop */
+  margin-bottom: 30px;
+}
+
+.hero-text p {
+  font-size: 18px; /* texto maior */
+  line-height: 1.9;
+  letter-spacing: 0.3px;
+}
+
+.hero-img img {
+  width: 380px; /* foto maior */
+  border-radius: 24px;
+}
+
+/* INFORMAÇÕES - ESTILO EDITORIAL */
+
+.informacoes {
+  padding: 140px 12%;
+  background: #f6f2ea;
+  position: relative;
+}
+
+.bloco {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 140px;
+}
+
+.bloco.invertido {
+  direction: rtl;
+}
+
+.bloco.invertido .texto {
+  direction: ltr;
+}
+
+.bloco h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  margin-bottom: 25px;
+  color: #0f2d5c;
+  position: relative;
+}
+
+.bloco h3::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background: #d4af37;
+  display: block;
+  margin-top: 12px;
+}
+
+.bloco p {
+  font-size: 18px;
+  line-height: 1.9;
+  max-width: 520px;
+  color: #2c3e60;
+}
+
+.bloco img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease;
+}
+
+.bloco img:hover {
+  transform: scale(1.03);
+}
+/* SERVIÇOS */
+.servicos {
+  padding: 80px 8%;
+  background: #e6f0fa;
+  text-align: center;
+}
+
+.servicos h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 40px;
+}
+
+.galeria {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.galeria img {
+  width: 250px;
+  border-radius: 12px;
+}
+
+.links a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #0f2d5c;
+}
+
+.links a:hover {
+  color: #d4af37;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #0f2d5c;
+  color: #fff;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+  .logo {
+    display: none;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: #0f2d5c;
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  nav ul li {
+    margin-bottom: 15px;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: left;
+    padding: 60px 8%;
+  }
+
+  .hero-text h2 {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .hero-img img {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 30px;
+  }
+}
