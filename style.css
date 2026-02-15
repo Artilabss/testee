@@ -278,7 +278,7 @@ footer {
 }
 /* RODAPÉ HUMANO */
 footer{
-    background:var(--azul);
+       background:#0f2d5c; 
     color:white;
     padding:60px 8vw;
     margin-top:80px;
@@ -335,6 +335,7 @@ footer p{
         gap:20px;
     }
 }
+
 
 
 
