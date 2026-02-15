@@ -65,7 +65,6 @@ nav a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 120px 10%;
-  background: #d9e6f5;
   gap: 60px;
 }
 
@@ -94,7 +93,7 @@ nav a:hover {
 
 .informacoes {
   padding: 140px 12%;
-  background: #f6f2ea;
+background: #d9e6f5;
   position: relative;
 }
 
@@ -152,7 +151,6 @@ nav a:hover {
 /* SERVIÇOS */
 .servicos {
   padding: 80px 8%;
-  background: #e6f0fa;
   text-align: center;
 }
 
@@ -278,5 +276,6 @@ footer {
     max-width: 100%;
   }
 }
+
 
 
